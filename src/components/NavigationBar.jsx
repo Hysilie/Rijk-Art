@@ -9,7 +9,6 @@ import Gallery from '../pages/Gallery'
 import Home from '../pages/Home'
 import Research from '../pages/Research'
 /* import logo */
-import NavigationBarLogo from './NavigationBarLogo'
 import logoRijk from '../images/logoRijk.png'
 
 
@@ -24,8 +23,7 @@ const [navbar, setNavbar] = useState(false);
     <div>
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="javascript:void(0)">
-              
-              <div className="h-10 w-16" ><img className='object-fill' src={logoRijk}/></div>
+              <div className="h-10 w-16" ><Link to='/'><img className='object-fill' src={logoRijk}/></Link></div>
             </a>
         <div className="md:hidden">
              <button className="p-2  rounded-md outline-none  focus:border"  onClick={() => setNavbar(!navbar)} >

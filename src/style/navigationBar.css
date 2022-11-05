@@ -2,10 +2,4 @@ li {
     cursor : pointer;
 }
 
-#logo{
-   height: 10vh;
-   width: 10vh;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-}
+
