@@ -1,13 +1,7 @@
 import React, {useState} from 'react'
-import {Routes, Route, Link} from 'react-router-dom'
-
-
-/* import every pages corresponding to all elements */
-import About from '../pages/About'
-import Artists from '../pages/Artists'
-import Gallery from '../pages/Gallery'
-import Home from '../pages/Home'
-import Research from '../pages/Research'
+import {Link} from 'react-router-dom'
+/*Import all routes*/
+import AllRoutes from '../components/AllRoutes'
 /* import logo */
 import logoRijk from '../images/logoRijk.png'
 
@@ -18,13 +12,16 @@ const [navbar, setNavbar] = useState(false);
 
   return (
    
-<nav className="w-full bg-amber-500 h-24 text-white">
+<nav className="w-full bg-amber-500 h-screen flex flex-col  text-white">
+    <div>
   <div className=" bg-amber-500 justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8  text-xl">
     <div>
+{/* Div contain the Logo */}
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
-              <div className="h-10 w-16" ><Link to='/'><img className='object-fill' src={logoRijk}/></Link></div>
-            </a>
+           
+              <div className="h-10 w-16" ><Link to='/'><img className='object-fill' alt='Logo Rijk Art' src={logoRijk}/></Link></div>
+            
+{/* Menu burger - imported tailwind */}
         <div className="md:hidden">
              <button className="p-2  rounded-md outline-none  focus:border"  onClick={() => setNavbar(!navbar)} >
         {navbar ? (
@@ -42,34 +39,32 @@ const [navbar, setNavbar] = useState(false);
     <div>
         <div className={`flex-1 justify-self-center bg-amber-500  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? "block" : "hidden"
               }`} >
+
+{/* Menu -burger - list with links to page  */}
             <ul className=" drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                             <li className="text-white hover:underline">
-                                <a href="javascript:void(0)"><Link to='/'>Home</Link></a>
+                               <Link to='/'>Home</Link>
                             </li>
                             <li className="text-white hover:underline">
-                                <a href="javascript:void(0)"><Link to='/gallery'>Gallery</Link></a>
+                               <Link to='/gallery'>Gallery</Link>
                             </li>
                             <li className="text-white hover:underline">
-                                <a href="javascript:void(0)"><Link to='/artists'>Artists</Link></a>
+                                <Link to='/artists'>Artists</Link>
                             </li>
                             <li className="text-white hover:underline">
-                                <a href="javascript:void(0)"><Link to='/about'>About</Link></a>
+                               <Link to='/about'>About</Link>
                             </li>
                             <li className="text-white hover:underline">
-                                <a href="javascript:void(0)"><Link to='/research'>Research</Link></a>
+                                <Link to='/research'>Research</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div></div>
+
     
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/artists" element={<Artists />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/research" element={<Research />} />
-        </Routes>
+       <AllRoutes />
+
     </nav>
   )
 }
