@@ -56,7 +56,7 @@ const GalleryCarrousel = ({data}) => {
         <div className="flex justify-between absolute top left w-full h-full">
           <button
             onClick={movePrev}
-            className=" md:ml-7 hover:bg-black text-white md:w-22 w-10 h-64 text-center opacity-75 hover:opacity-25 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className=" md:ml-7 hover:bg-black text-white md:w-22 w-10 h-64 text-center opacity-25 hover:opacity-5 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
             disabled={isDisabled('prev')}
           >
             <svg
@@ -77,7 +77,7 @@ const GalleryCarrousel = ({data}) => {
           </button>
           <button
             onClick={moveNext}
-            className="hover:bg-black text-white  w-10 md:w-22 md:mr-7 h-64  text-center opacity-25 hover:opacity-25 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="hover:bg-black text-white  w-10 md:w-22 md:mr-7 h-64  text-center opacity-25 hover:opacity-5 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
             disabled={isDisabled('next')}
           >
             <svg
