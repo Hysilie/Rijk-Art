@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 import AllRoutes from '../components/AllRoutes'
 /* import logo */
 import logoRijk from '../images/logoRijk.png'
-
+/* import social media */
+import SocialMedias from './SocialMedias'
 
 function NavigationBar() {
 const [navbar, setNavbar] = useState(false);
@@ -12,9 +13,9 @@ const [navbar, setNavbar] = useState(false);
 
   return (
    
-<nav className="w-full bg-amber-500 h-screen flex flex-col  text-white">
+<nav className="w-full bg-amber-500 h-screen flex flex-col space-y-16  text-white">
     <div>
-  <div className=" bg-amber-500 justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8  text-xl">
+  <div className=" bg-amber-500 justify-between px-4 mx-auto lg:max-w-8xl md:items-center md:flex md:px-4  text-xl">
     <div>
 {/* Div contain the Logo */}
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -41,7 +42,7 @@ const [navbar, setNavbar] = useState(false);
               }`} >
 
 {/* Menu -burger - list with links to page  */}
-            <ul className=" drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
+            <ul className=" drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0  z-20">
                             <li className="text-white hover:underline">
                                <Link to='/'>Home</Link>
                             </li>
@@ -60,11 +61,15 @@ const [navbar, setNavbar] = useState(false);
                         </ul>
                     </div>
                 </div>
-            </div></div>
+            </div>
+            
+            
+
+            </div>
 
     
        <AllRoutes />
-
+       <SocialMedias />
     </nav>
   )
 }
