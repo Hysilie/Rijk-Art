@@ -1,11 +1,21 @@
-.home {
+#home1 {
 background-position: center center; 
 background-repeat: no-repeat; 
 background-attachment: fixed; 
 background-size: cover;
-background-color: #464646;
+background-image: url(../images/backgroundHome.jpeg);
+transition:0.5s; 
 }
 
+#home2 {
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+    background-image: url(../images/backgroundHome2.jpg);
+    transition: 1s;
+    }
+    
 .vector {
 background-position: left; 
 background-repeat: no-repeat; 
