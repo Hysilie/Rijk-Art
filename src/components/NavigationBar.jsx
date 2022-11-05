@@ -20,7 +20,7 @@ const [navbar, setNavbar] = useState(false);
   return (
    
 <nav className="w-full bg-amber-500 h-24 text-white">
-  <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8  text-xl">
+  <div className=" bg-amber-500 justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8  text-xl">
     <div>
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="javascript:void(0)">
@@ -42,9 +42,9 @@ const [navbar, setNavbar] = useState(false);
            </div>
      </div>
     <div>
-        <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? "block" : "hidden"
+        <div className={`flex-1 justify-self-center bg-amber-500  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? "block" : "hidden"
               }`} >
-            <ul className=" drop-shadow-lg shadow-blackitems-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
+            <ul className=" drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                             <li className="text-white hover:underline">
                                 <a href="javascript:void(0)"><Link to='/'>Home</Link></a>
                             </li>
