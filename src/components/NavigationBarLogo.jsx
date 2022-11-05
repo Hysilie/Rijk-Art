@@ -1,8 +1,9 @@
 import React from 'react'
+import logoRijk from '../images/logoRijk.png'
 
 function NavigationBarLogo() {
   return (
-    <div>Logo</div>
+    <div>{logoRijk}</div>
   )
 }
 

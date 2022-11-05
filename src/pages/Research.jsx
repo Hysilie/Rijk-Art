@@ -1,4 +1,4 @@
-/* import React from 'react'
+import React from 'react'
 
 function Research() {
   return (
@@ -6,4 +6,4 @@ function Research() {
   )
 }
 
-export default Research */
+export default Research 
