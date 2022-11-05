@@ -1,18 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
+import ElementOfCarrousel from './ElementOfCarrousel';
 
-// Need to import
-const data = {ressources: [
-    {title: 'title1', link: 'link1', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title2', link: 'link2', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title3', link: 'link3', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title4', link: 'link4', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title5', link: 'link5', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title6', link: 'link6', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title7', link: 'link7', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-    {title: 'title8', link: 'link8', imageUrl: 'https://img.20mn.fr/6j2p_uHHTBSPl-OJR5iakyk/1200x768_allier_un_deuxieme_chat_tue_par_un_tir_d_arbalete_a_domerat1'},
-]}
-
-const GalleryCarrousel = () => {
+const GalleryCarrousel = ({data}) => {
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -56,10 +45,13 @@ const GalleryCarrousel = () => {
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - carousel.current.offsetWidth
       : 0;
-  }, []);
+       // eslint-disable-next-line
+  }, [{data}]);
+  
+/* Put data inside of useEffect return or carrousel doesnt work? */
 
   return (
-    <div className="carousel my-12 mx-auto w-full">
+    <div className="carousel  mx-auto w-full">
       <div className="relative overflow-hidden">
         <div className="flex justify-between absolute top left w-full h-full">
           <button
@@ -70,7 +62,7 @@ const GalleryCarrousel = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-12 w-20 -ml-5"
-              fill="none"
+              fill="#333"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -91,7 +83,7 @@ const GalleryCarrousel = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-12 w-20 -ml-5"
-              fill="none"
+              fill="#333"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -107,48 +99,15 @@ const GalleryCarrousel = () => {
         </div>
         <div
           ref={carousel}
-          className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-72 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-96 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
-          {data.ressources.map((resource, index) => {
+
+            {/* map for every element of the array givent by result.artObject of the API */}
+          {data?.map((el, index) => {
             return (
-              <div
-                key={index}
-                className="carousel-item   shadow-[#cfcfcfce] shadow-lg   text-center flex flex-col-reverse relative w-78 h-64 snap-start"
-              >
-                <div className=' h-32'> <h2  className='text-black text-center text-lg m-1' id='title-art'>" Titre de l'oeuvre "</h2>
-                <hr className='w-5/6 m-auto'></hr>
-                <p className='text-black text-sm m-2'>Nom De l'Artiste</p>
-                </div>
-                <a
-                  href={resource.link}
-                  className="h-full w-full aspect-square  rounded-t-lg block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
-                  style={{ backgroundImage: `url(${resource.imageUrl || ''})` }}
-                >
-                  <img
-                    src={resource.imageUrl || ''}
-                    alt={resource.title}
-                    className="w-full aspect-square hidden drop-shadow-xl"
-                  />
-                   
-                </a>
-                <a
-                  href={resource.link}
-                  className="h-full w-full  rounded-t-lg aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-75 hover:bg-black z-10"
-                >
-                    
-                  <h3 className="text-white py-6 px-3 mx-auto text-xl">
-                    {/* {resource.title} */} "Titre de l'oeuvre"
-                  </h3>
-                  <p>Click to discover</p>
-                </a> 
-              </div>
-             
-
-
+                <ElementOfCarrousel key={index} {...el} />
             );
           })}
-
-
 
         </div>
       </div>
