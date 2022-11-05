@@ -1,0 +1,24 @@
+.home {
+background-position: center center; 
+background-repeat: no-repeat; 
+background-attachment: fixed; 
+background-size: cover;
+background-color: #464646;
+}
+
+.vector {
+background-position: left; 
+background-repeat: no-repeat; 
+background-attachment: fixed; 
+background-size: contain;
+
+}
+
+#home-title {
+    font-family: 'Italiana', serif !important;
+}
+
+
+#under-title {
+    font-family: verdana;
+}

@@ -42,7 +42,10 @@ const [navbar, setNavbar] = useState(false);
               }`} >
 
 {/* Menu -burger - list with links to page  */}
-            <ul className=" drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0  z-20">
+            <ul className="drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0  z-20">
+              <div className='absolute w-full'>
+
+              </div>
                             <li className="text-white hover:underline">
                                <Link to='/'>Home</Link>
                             </li>
