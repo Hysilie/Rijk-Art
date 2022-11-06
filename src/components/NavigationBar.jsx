@@ -62,7 +62,7 @@ const [navbar, setNavbar] = useState(false);
                                 <Link to='/research'>Research</Link>
                             </li>
                             <li className="text-white hover:underline">
-                                <Link to='/gallery/search'>GallerySearch</Link>
+                                <Link to='/artists/gallery'>GallerySearch</Link>
                             </li>
                         </ul>
                     </div>

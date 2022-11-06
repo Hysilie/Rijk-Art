@@ -1,3 +1,10 @@
 #artist-name, #modal-title{
     font-family: 'Italiana', serif !important;
 }
+
+
+.portrait-img {
+    height: 10vh !important;
+    width: 10vh !important;
+    border-radius: 50% !important
+}

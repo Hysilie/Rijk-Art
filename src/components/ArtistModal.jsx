@@ -1,10 +1,22 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import loupe from '../../src/images/loupe.png'
 import arrow from '../../src/images/arrow.png'
 
 
-function ArtistModal({artistName,description, deathDate, birthDate, artMovement}) {
+function ArtistModal({code,artistName,description, deathDate, birthDate, artMovement}) {
 const [showModal, setShowModal] = React.useState(false);
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className=" flex justify-center">
         <button  onClick={() => setShowModal(true)} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400">
@@ -43,11 +55,11 @@ const [showModal, setShowModal] = React.useState(false);
                   </p>
                 </div>
                 <div className='flex flex-col justify-center m-4'>
-                <button  onClick={() => console.log('Link to the gallery')} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400"> artist gallery </button>
-       
-                <button  onClick={() => console.log('Link to the gallery')} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400">
-                 <img className='h-5 w-5' src={arrow} alt='more info'/> </button>
-
+  <Link to={`/artists/gallery/${code}`}>
+                <div className=" cursor-pointer flex justify-center font-normal text-slate-700 hover:text-slate-400"> artist gallery </div>
+                <div className=" cursor-pointer flex justify-center font-normal text-slate-700 hover:text-slate-400">
+                 <img className='h-5 w-5' src={arrow} alt='more info'/> </div>
+</Link>
        
                 </div>
                 {/*Footer with the close button*/}

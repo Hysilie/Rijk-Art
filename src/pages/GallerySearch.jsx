@@ -1,38 +1,26 @@
 import React, {useState, useEffect, useRef} from 'react'
+import {useParams} from 'react-router-dom';
 import ElementOfCarrousel from '../components/ElementOfCarrousel';
 
 function GallerySearch() {
+const [painter, setPainter] = useState([]);
+const {id} = useParams();
+;
 
 
-const data = [
-    {
-        objectNumber : 1,
-        title: 'Salut',
-        webImage: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Collage_of_Six_Cats-02.jpg',
-        principalOrFirstMaker :'Moi'
-    },
-    {
-        objectNumber : 2,
-        title: 'Salut',
-        webImage: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Collage_of_Six_Cats-02.jpg',
-        principalOrFirstMaker :'Moi'
-    },
-    {
-        objectNumber : 3,
-        title: 'Salut',
-        webImage: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Collage_of_Six_Cats-02.jpg',
-        principalOrFirstMaker :'Moi'
-    },
-    {
-        objectNumber : 4,
-        title: 'Salut',
-        webImage: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Collage_of_Six_Cats-02.jpg',
-        principalOrFirstMaker :'Moi'
-    },
-]
-
-
-
+const fetchPainters = () => {
+    fetch(`https://www.rijksmuseum.nl/api/en/collection?key=puw2AEY6&involvedMaker=${id}`)
+    .then(response => response.json())
+    .then(result => {
+        setPainter(result.artObjects)
+        
+    })
+    .catch(error => console.log('error', error));
+}
+useEffect(() => {
+    fetchPainters();
+    // eslint-disable-next-line
+}, [id]);
 
     const maxScrollWidth = useRef(0);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,7 +66,7 @@ const data = [
         ? carousel.current.scrollWidth - carousel.current.offsetWidth
         : 0;
          // eslint-disable-next-line
-    }, [{data}]);
+    }, [{painter}]);
     
   /* Put data inside of useEffect return or carrousel doesnt work? */
   
@@ -144,13 +132,13 @@ const data = [
             ref={carousel}
             className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-96 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
           >
-  
+
               {/* map for every element of the array givent by result.artObject of the API */}
-       {data?.map((el, index) => {
+        {painter?.map((el, index) => {
               return (
                   <ElementOfCarrousel key={index} {...el} />
               );
-            })} 
+            })}  
   
           </div>
           </div>
