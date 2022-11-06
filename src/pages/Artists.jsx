@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import ArtistPresentation from '../../src/components/ArtistPresentation'
+import '../../src/style/artists.css'
 
 function Artists() {
 
