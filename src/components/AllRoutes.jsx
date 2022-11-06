@@ -8,7 +8,6 @@ import Gallery from '../pages/Gallery'
 import GallerySearch from '../pages/GallerySearch'
 import GallerySearchBar from '../pages/GallerySearchBar'
 import Home from '../pages/Home'
-import Research from '../pages/Research'
 import DetailArt from '../pages/DetailArt'
 
 function AllRoutes({searchValue, setSearchValue,resultsSearch, getResult}) {
@@ -23,7 +22,6 @@ function AllRoutes({searchValue, setSearchValue,resultsSearch, getResult}) {
     <Route path="/gallery/detail/:id" element={<DetailArt />} />
     <Route path="/artists" element={<Artists />} />
     <Route path="/about" element={<About />} />
-    <Route path="/research" element={<Research />} />
     </Routes>
   )
 }
