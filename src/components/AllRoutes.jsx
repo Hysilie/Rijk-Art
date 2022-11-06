@@ -7,12 +7,14 @@ import Artists from '../pages/Artists'
 import Gallery from '../pages/Gallery'
 import Home from '../pages/Home'
 import Research from '../pages/Research'
+import DetailArt from '../pages/DetailArt'
 
 function AllRoutes() {
   return (
      <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/gallery" element={<Gallery />} />
+    <Route path="/gallery/detail" element={<DetailArt />} />
     <Route path="/artists" element={<Artists />} />
     <Route path="/about" element={<About />} />
     <Route path="/research" element={<Research />} />
