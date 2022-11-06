@@ -13,7 +13,9 @@ function ElementOfCarrouselSearch({objectNumber,title,webImage,principalOrFirstM
     <hr className='w-5/6 m-auto'></hr>
     <p className='text-black text-sm m-2'>{principalOrFirstMaker}</p>
     </div>
-    {webImage ? <ECarrouselSearchImage webImage={webImage} objectNumber={objectNumber} /> : <a
+    {webImage ? <ECarrouselSearchImage webImage={webImage} objectNumber={objectNumber} /> :
+/* eslint-disable-next-line */
+    <a
     //eslint-disable-next-line
       href={`/gallery/detail/${objectNumber}`}
       className="h-full w-full aspect-square  rounded-t-lg block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"

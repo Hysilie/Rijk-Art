@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../../src/style/detailArt.css'
+import DetailArtImage from '../components/DetailArtImage'
 
 function DetailArt() {
 const [art, setArt] = useState([])
@@ -36,7 +37,8 @@ useEffect(() => {
 
 <div className="flex flex-wrap justify-center w-5/6 m-2 md:-m-5 md:flex-row">
   <div className="flex-2 w-6/12 sm:w-4/12 px-4 ml-5">
-    {art.artObject ? (<img src={art.artObject.webImage.url} alt="focus" className="shadow-lg rounded-lg max-w-auto max-h-96 align-middle" />) : null }
+    {art.artObject ? <DetailArtImage webImage={art.artObject.webImage}/>:null}
+    
     </div>
 
 {/* setup for small screen */}

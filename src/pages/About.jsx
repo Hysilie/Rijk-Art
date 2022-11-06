@@ -22,7 +22,7 @@ function About() {
       It has so much to see, not just art ! You can learn about Dutch history and culture, 
       see beautiful architecture. I choose these theme after visiting Netherlands last year and
        because there's also plenty of design and creative opportunities in the field of digital culture,
-        due to there <a href='https://data.rijksmuseum.nl/object-metadata/api/' alt='Api link' target='_blank' className='text-slate-300 font-bold '>API !</a> (thanks !)
+        due to there <a href='https://data.rijksmuseum.nl/object-metadata/api/' rel="noreferrer" alt='Api link' target='_blank' className='text-slate-300 font-bold '>API !</a> (thanks !)
 
       <br></br> I made a small project based on React. This was my first solo experience 
       , so little things can not look very good in front of everyone, sorry for mistakes,
@@ -32,7 +32,7 @@ function About() {
        <p className='text-sm  md:m-5'>React, Tailwind, Github, Figma </p> 
        
        <h2 className='' id='project-title'>Documentation</h2>
-       <p className='text-sm  md:m-5'>You can find all this project on my <a href='https://github.com/Hysilie/Rijk-Art' alt='Api link' target='_blank' className='text-slate-300 font-bold '>Github !</a> </p> 
+       <p className='text-sm  md:m-5'>You can find all this project on my <a href='https://github.com/Hysilie/Rijk-Art' rel="noreferrer" alt='Api link' target='_blank' className='text-slate-300 font-bold '>Github !</a> </p> 
 
     </div>
     <div className='hidden md:flex text-black max-w-full max-h-full   flex justify-center w-1/2'><img src={working} alt='working logo'className='max-w-full h-full'/></div>
