@@ -29,7 +29,7 @@ const portraits = [
     code: "Leiden - Dutchland",
     artistUrl: "https://i.ibb.co/TTmQGbM/rembrandt-1.jpg",
     description:
-      "Rembrandt Harmenszoon van Rijn was a Dutch draughtsman, painter, and printmaker. An innovative and prolific master in three media, he is generally considered one of the greatest visual artists in the history of art.",
+      "Rembrandt Harmenszoon van Rijn known as Rembrandt was a Dutch draughtsman, painter, and printmaker became famous. An innovative and prolific master in three media, he is generally considered one of the greatest visual artists in the history of art.",
     deathDate: 1669,
     birthDate: 1606,
     artMovement: "Baroque",

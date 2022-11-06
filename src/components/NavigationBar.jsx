@@ -6,8 +6,9 @@ import AllRoutes from '../components/AllRoutes'
 import logoRijk from '../images/logoRijk.png'
 /* import social media */
 import SocialMedias from './SocialMedias'
+import Searchbar from './Searchbar'
 
-function NavigationBar() {
+function NavigationBar({searchValue, setSearchValue,resultsSearch, getResult}) {
 const [navbar, setNavbar] = useState(false);
 
 
@@ -58,8 +59,13 @@ const [navbar, setNavbar] = useState(false);
                             <li className="text-white hover:underline">
                                <Link to='/about'>About</Link>
                             </li>
+                           
                             <li className="text-white hover:underline">
-                                <Link to='/research'>Research</Link>
+                                <Searchbar resultsSearch={resultsSearch}
+                                           getResult={getResult} 
+                                           searchValue={searchValue} 
+                                           setSearchValue={setSearchValue}/>
+          
                             </li>
                         </ul>
                     </div>
@@ -71,7 +77,7 @@ const [navbar, setNavbar] = useState(false);
             </div>
 
     
-       <AllRoutes />
+       <AllRoutes resultsSearch={resultsSearch} searchValue={searchValue} setSearchValue={setSearchValue} getResult={getResult}/>
        <SocialMedias />
     </nav>
   )

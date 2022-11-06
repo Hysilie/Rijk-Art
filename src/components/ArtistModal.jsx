@@ -8,15 +8,6 @@ function ArtistModal({code,artistName,description, deathDate, birthDate, artMove
 const [showModal, setShowModal] = React.useState(false);
 
 
-
-
-
-
-
-
-
-
-
   return (
     <div className=" flex justify-center">
         <button  onClick={() => setShowModal(true)} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400">
