@@ -17,6 +17,7 @@ const fetchArt =() => {
 }
 useEffect(() => {
     fetchArt();
+    // eslint-disable-next-line
 }, [])
 
   return (
