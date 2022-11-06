@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import ArtistPresentation from '../../src/components/ArtistPresentation'
 import '../../src/style/artists.css'
+import  portraits from '../../src/data/portraits'
 
 function Artists() {
 
@@ -111,13 +112,7 @@ useEffect(() => {
           className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-96 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
 
-            {/* map for every element of the array givent by result.artObject of the API */}
-          <ArtistPresentation />
-          <ArtistPresentation />
-          <ArtistPresentation />
-          <ArtistPresentation />
-          <ArtistPresentation />
-          <ArtistPresentation />
+          {portraits.map((portrait,index) => <ArtistPresentation portrait={portraits} key={index} {...portrait}/>)}
 
         </div>
       </div>

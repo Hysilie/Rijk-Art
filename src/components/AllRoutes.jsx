@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom'
 import About from '../pages/About'
 import Artists from '../pages/Artists'
 import Gallery from '../pages/Gallery'
+import GallerySearch from '../pages/GallerySearch'
 import Home from '../pages/Home'
 import Research from '../pages/Research'
 import DetailArt from '../pages/DetailArt'
@@ -14,6 +15,7 @@ function AllRoutes() {
      <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/gallery" element={<Gallery />} />
+    <Route path="/gallery/search/" element={<GallerySearch />} />
     <Route path="/gallery/detail/:id" element={<DetailArt />} />
     <Route path="/artists" element={<Artists />} />
     <Route path="/about" element={<About />} />

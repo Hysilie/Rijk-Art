@@ -3,7 +3,7 @@ import loupe from '../../src/images/loupe.png'
 import arrow from '../../src/images/arrow.png'
 
 
-function ArtistModal() {
+function ArtistModal({artistName,description, deathDate, birthDate, artMovement}) {
 const [showModal, setShowModal] = React.useState(false);
   return (
     <div className=" flex justify-center">
@@ -22,7 +22,7 @@ const [showModal, setShowModal] = React.useState(false);
                 {/*header content*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 id="modal-title" className="text-3xl font-semibold">
-                    Vincent Van Gogh
+                    {artistName}
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -35,11 +35,11 @@ const [showModal, setShowModal] = React.useState(false);
                 </div>
                 {/*Body of the modal*/}
                 <div className="relative p-6 flex-auto">
-                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Date </h2><p className='m-2'>30-10-1221 / 21-04-1241</p>
-                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Art movement </h2> <p className='m-2'>Pointillism -  Neo-impressionism</p>
+                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Date </h2><p className='m-2'>{birthDate} - {deathDate}</p>
+                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Art movement </h2> <p className='m-2'>{artMovement}</p>
                     <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>About</h2>
                   <p className="m-2  leading-relaxed">
-                  Vincent van Gogh, né le 30 mars 1853 à Groot-Zundert, aux Pays-Bas, et mort le 29 juillet 1890 à Auvers-sur-Oise, en France, est un peintre et dessinateur néerlandais. Son œuvre pleine de naturalisme, inspirée par l'impressionnisme et le pointillisme, annonce le fauvisme et l'expressionnisme
+                    {description}
                   </p>
                 </div>
                 <div className='flex flex-col justify-center m-4'>
