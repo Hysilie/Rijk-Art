@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../../src/style/detailArt.css'
-import DetailArtImage from '../components/DetailArtImage'
+import DetailArtImage from '../../src/components/DetailArtImage'
 
 function DetailArt() {
 const [art, setArt] = useState([])
