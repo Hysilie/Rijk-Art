@@ -1,7 +1,3 @@
-#galleryTitle{
-    font-family: 'Italiana' ,serif !important;;
-}
-
-#title-art {
+#galleryTitle, #title-art{
     font-family: 'Italiana' ,serif !important;;
 }

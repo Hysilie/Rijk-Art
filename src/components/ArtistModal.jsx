@@ -1,5 +1,6 @@
 import React from 'react'
 import loupe from '../../src/images/loupe.png'
+import arrow from '../../src/images/arrow.png'
 
 
 function ArtistModal() {
@@ -18,10 +19,10 @@ const [showModal, setShowModal] = React.useState(false);
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                {/*header*/}
+                {/*header content*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
-                    Modal Title
+                  <h3 id="modal-title" className="text-3xl font-semibold">
+                    Vincent Van Gogh
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -32,20 +33,27 @@ const [showModal, setShowModal] = React.useState(false);
                     </span>
                   </button>
                 </div>
-                {/*body*/}
+                {/*Body of the modal*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
+                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Date </h2><p className='m-2'>30-10-1221 / 21-04-1241</p>
+                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>Art movement </h2> <p className='m-2'>Pointillism -  Neo-impressionism</p>
+                    <h2 className='text-xs mt-0  text-slate-300 font-bold uppercase'>About</h2>
+                  <p className="m-2  leading-relaxed">
+                  Vincent van Gogh, né le 30 mars 1853 à Groot-Zundert, aux Pays-Bas, et mort le 29 juillet 1890 à Auvers-sur-Oise, en France, est un peintre et dessinateur néerlandais. Son œuvre pleine de naturalisme, inspirée par l'impressionnisme et le pointillisme, annonce le fauvisme et l'expressionnisme
                   </p>
                 </div>
-                {/*footer*/}
+                <div className='flex flex-col justify-center m-4'>
+                <button  onClick={() => console.log('Link to the gallery')} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400"> artist gallery </button>
+       
+                <button  onClick={() => console.log('Link to the gallery')} type="button" className=" flex justify-center font-normal text-slate-700 hover:text-slate-400">
+                 <img className='h-5 w-5' src={arrow} alt='more info'/> </button>
+
+       
+                </div>
+                {/*Footer with the close button*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-black background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
