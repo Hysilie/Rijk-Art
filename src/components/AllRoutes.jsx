@@ -14,7 +14,7 @@ function AllRoutes() {
      <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/gallery" element={<Gallery />} />
-    <Route path="/gallery/detail" element={<DetailArt />} />
+    <Route path="/gallery/detail/:id" element={<DetailArt />} />
     <Route path="/artists" element={<Artists />} />
     <Route path="/about" element={<About />} />
     <Route path="/research" element={<Research />} />

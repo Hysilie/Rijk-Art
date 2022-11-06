@@ -14,9 +14,6 @@ function Gallery() {
   .then(response => response.json())
   .then(result => {
     setData(result.artObjects)
-    console.log(result.artObjects)
-    console.log(result.artObjects[0].webImage.url)
-    console.log(result)
   })
   .catch(error => console.log('error', error));       
     }, [])

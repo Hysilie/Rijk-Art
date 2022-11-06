@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 function ElementOfCarrousel({objectNumber,title,webImage:{url},principalOrFirstMaker}) {
   return (
@@ -10,7 +12,7 @@ function ElementOfCarrousel({objectNumber,title,webImage:{url},principalOrFirstM
     <p className='text-black text-sm m-2'>{principalOrFirstMaker}</p>
     </div>
     <a
-      href={objectNumber}
+      href={`/gallery/detail/${objectNumber}`}
       className="h-full w-full aspect-square  rounded-t-lg block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
      style={{ backgroundImage: `url(${url})` }} 
     >
@@ -22,14 +24,14 @@ function ElementOfCarrousel({objectNumber,title,webImage:{url},principalOrFirstM
        
     </a>
     <a
-      href={objectNumber}
+      href={`/gallery/detail/${objectNumber}`}
       className=" cursor-pointer h-full w-full  rounded-t-lg aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-75 hover:bg-black z-10"
     >
         
       <h3 className="text-white py-6 px-3 mx-auto text-xl">
       {`"${title}"`}<br></br>by<br></br>{principalOrFirstMaker}
       </h3><br></br><br></br>
-      <p>Click to discover</p>
+      <Link to={`/gallery/detail/${objectNumber}`}><p>Click to discover</p></Link>
     </a> 
   </div>
   )

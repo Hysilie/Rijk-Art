@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import '../../src/style/detailArt.css'
 
 function DetailArt() {
+const [art, setArt] = useState([])
+const {id} = useParams();
+
+
+const fetchArt =() => {
+    fetch(`https://www.rijksmuseum.nl/api/en/collection/${id}?key=puw2AEY6`)
+    .then((response) => response.json())
+    .then((result) => {
+        setArt(result)
+        console.log(result)
+    })
+}
+useEffect(() => {
+    fetchArt();
+}, [])
+
   return (
-    <div className=" bg-white drop-shadow-md h-4/6 flex flex-col w-screen">
-      {/* Make the Title between horizontal bar */}
+
+
+    <div className=" bg-white drop-shadow-md h-4/6 flex flex-col w-screen box-border">
+
+{/* Make the Title between horizontal bar */}
 <hr className='w-2/6'></hr>
 <div className="hidden md:flex relative flex py-5 items-center">
     <div className="flex-grow border-t border-gray-200"></div>
@@ -12,29 +32,36 @@ function DetailArt() {
     <div className="flex-grow border-t border-gray-200"></div>
 </div>
 
-<div className="flex flex-wrap justify-center m-2 md:m-5 md:flex-row">
-  <div className="flex-2 w-6/12 sm:w-4/12 px-4">
-    <img src="https://lh3.googleusercontent.com/SsEIJWka3_cYRXXSE8VD3XNOgtOxoZhqW1uB6UFj78eg8gq3G4jAqL4Z_5KwA12aD7Leqp27F653aBkYkRBkEQyeKxfaZPyDx0O8CzWg=s0" alt="focus" className="shadow-lg rounded max-w-full h-auto align-middle border-none" />
-   {/* Little screen */}</div>
+
+<div className="flex flex-wrap justify-center w-5/6 m-2 md:-m-5 md:flex-row">
+  <div className="flex-2 w-6/12 sm:w-4/12 px-4 ml-5">
+    {art.artObject ? (<img src={art.artObject.webImage.url} alt="focus" className="shadow-lg rounded-lg max-w-auto max-h-96 align-middle" />) : null }
+    </div>
+
+{/* setup for small screen */}
    <div className=' text-black  md:hidden w-96'>
    
-        <h2 className='mt-2 text-center text-2xl' id='detail-title'>The Night Watch</h2> {/* title */}
-         <p className='text-center text-sm'>Rembrandt van Rijn</p> {/* principalMakers": [{"name" */}
+       {art.artObject?<h2 className='mt-2 text-center text-2xl' id='detail-title'>{art.artObject.title}</h2>:null}  {/* title */}
+         {art.artObject?<p className='text-center text-sm'>{art.artObject.principalMaker}</p> :null}{/* principalMakers": [{"name" */}
    
           <div className='flex justify-center items-center space-x-3'>
-         <p className=' text-center text-slate-300 font-bold'>1642</p> {/* dating": {"presentingDate":  */}
-         <p className='text-center text-sm'>canvas , oil paint (paint)</p> {/* materials": ["canvas","oil paint (paint) */}
+          {art.artObject? <p className='text-slate-300 font-bold'>{art.artObject.dating.sortingDate}</p> :null}
+
+{/* map for different materials used */}
+         {art.artObject? <p className='text-center text-sm'>{art.artObject.materials.map(
+              (material) => <span>{material}</span>)}</p> :null}  
           </div>
-        <p className='text-sm mt-2'> Rembrandt’s largest, most famous canvas was made for the Arquebusiers guild hall. This was one of several halls of Amsterdam’s civic guard, the city’s militia and police. \r\nRembrandt was the first to paint figures in a group portrait actually doing something. The captain, dressed in black, is telling his lieutenant to start the company marching. The guardsmen are getting into formation. Rembrandt used the light to focus on particular details, like the captain’s gesturing hand and the young girl in the foreground. She was the company mascot</p> 
+          {art.artObject? <p className=' text-justify text-sm mt-2'> {art.artObject.plaqueDescriptionEnglish}</p>:null}
     </div>
 
 {/* Mid screen or more */}
 <div className='text-black hidden md:inline w-96  flex-1 m-5 '>
-         <h2 className=' text-4xl' id='detail-title'> The Night Watch   </h2>
-         <p className=' text-base'>Rembrandt van Rijn</p>
-         <p className='text-slate-300 font-bold'>1642</p> {/* dating": {"presentingDate":  */}
-         <p></p>
-         <p className='text-sm mt-2'> Rembrandt’s largest, most famous canvas was made for the Arquebusiers guild hall. This was one of several halls of Amsterdam’s civic guard, the city’s militia and police. \r\nRembrandt was the first to paint figures in a group portrait actually doing something. The captain, dressed in black, is telling his lieutenant to start the company marching. The guardsmen are getting into formation. Rembrandt used the light to focus on particular details, like the captain’s gesturing hand and the young girl in the foreground. She was the company mascot</p>
+{art.artObject? <h2 className=' text-4xl' id='detail-title'> The Night Watch   </h2> : null}
+         {art.artObject? <p className=' text-base'>{art.artObject.principalMaker}</p> : null } 
+        {art.artObject? <p className='text-slate-300 font-bold'>{art.artObject.dating.sortingDate}</p> :null}
+        {art.artObject? <p className=' text-sm'>{art.artObject.materials.map(
+              (material) => <span>{material}</span>)}</p> :null}  
+         {art.artObject? <p className=' text-justify text-sm mt-2'> {art.artObject.plaqueDescriptionEnglish}</p>:null}
     </div>
 
  </div>

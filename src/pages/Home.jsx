@@ -8,10 +8,10 @@ const Home = () => {
   /* State for the animation of background */
   const [backgroundID, setBackgroundID] = useState("home1")
   useEffect(() => {
-    console.log('test lancement')
+    
 /* set a timer to start the siwtch with the next background */
     const timer = setTimeout(() => {
-      console.log('test changement')
+    
       setBackgroundID("home2");
     }, 10000);
   
