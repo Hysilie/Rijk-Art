@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-#HEllo
-![PRESENTATION](./readme/giphy.gif)
-=======
 <h1 align="center">⏝⏜⏝⏜ Welcome to Rijks'Art project ⏝⏜⏝⏜</h1>
 <h2></h2>
 
@@ -38,4 +34,5 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <h1 href='#'>Objectives</h1>
 <p>As I said, this project was an opportunity to learn and practice React. Some mistakes are expected.
 <br/> I do appreciate any feedbacks.</p>
->>>>>>> f1e4966b55aa02b2bd64d3ac9eb22aabe8d279fd
+
+<p align='center'>![PRESENTATION](./readme/giphy.gif)</p>
