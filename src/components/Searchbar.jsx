@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom'
 
 function Searchbar({searchValue, setSearchValue, getResult}) {
   
-{
-  return (
+{ return (
     <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
     <div className="grid place-items-center h-full w-12 text-gray-300">
     <Link to='/gallery/search/'>

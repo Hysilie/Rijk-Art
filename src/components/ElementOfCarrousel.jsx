@@ -7,7 +7,7 @@ function ElementOfCarrousel({objectNumber,title,webImage:{url},principalOrFirstM
     <div
     className="carousel-item   shadow-[#cfcfcfce] shadow-lg   text-center flex flex-col-reverse relative w-78 h-80 snap-start"
   >
-    <div className='max-h-32'> <h2  className='text-black text-center text-lg m-1' id='title-art'>{`" ${title}"`}</h2>
+    <div className='max-h-38'> <h2  className='text-black text-center text-lg m-1' id='title-art'>{`" ${title}"`}</h2>
     <hr className='w-5/6 m-auto'></hr>
     <p className='text-black text-sm m-2'>{principalOrFirstMaker}</p>
     </div>
