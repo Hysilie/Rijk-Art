@@ -35,4 +35,3 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <p>As I said, this project was an opportunity to learn and practice React. Some mistakes are expected.
 <br/> I do appreciate any feedbacks.</p>
 
-<p align='center'>![PRESENTATION](./readme/giphy.gif)</p>
