@@ -36,6 +36,7 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <li>Explore Tree.JS </li>
 <li>Create my API for painters informations</li>
 <li>Use Node and deploy</li>
+<li>Improve Search Bar</li>
 </ul>
 
 <h1 href='#'>Objectives</h1>
