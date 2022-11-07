@@ -3,6 +3,7 @@ import ArtistPresentation from '../../src/components/ArtistPresentation'
 import '../../src/style/artists.css'
 import  portraits from '../../src/data/portraits'
 
+
 function Artists() {
 
 const maxScrollWidth = useRef(0);
@@ -57,7 +58,7 @@ useEffect(() => {
 <hr className='w-2/6'></hr>
 <div className="relative flex py-5 items-center">
     <div className="flex-grow border-t border-gray-200"></div>
-    <span className="flex-shrink mx-4 text-gray-200"><h2 className='text-black text-5xl m-5' id='galleryTitle'> Famous Artists</h2></span>
+    <span className="flex-shrink mx-4 text-gray-200"><h2 className='text-black text-5xl m-5' id='galleryTitle'>Famous Artists</h2></span>
     <div className="flex-grow border-t border-gray-200"></div>
 </div>
      {/* Make the Carrousel */}

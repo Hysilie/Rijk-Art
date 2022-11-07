@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import '../../src/style/detailArt.css'
 import DetailArtImage from '../../src/components/DetailArtImage'
+import ReturnButton from '../../src/components/ReturnButton'
 
 function DetailArt() {
 const [art, setArt] = useState([])
@@ -67,6 +68,9 @@ useEffect(() => {
          {art.artObject? <p className=' text-justify text-sm mt-2'> {art.artObject.plaqueDescriptionEnglish}</p>:null}
     </div>
 
+<div >
+  <ReturnButton />
+</div>
  </div>
  
  {/* sm screen */}
