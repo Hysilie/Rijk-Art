@@ -47,6 +47,7 @@ const [navbar, setNavbar] = useState(false);
               <div className='absolute w-full'>
 
               </div>
+              
                             <li className="text-white hover:underline">
                                <Link to='/'>Home</Link>
                             </li>

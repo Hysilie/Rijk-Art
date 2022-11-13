@@ -25,7 +25,7 @@ function ElementOfCarrousel({objectNumber,title,webImage,principalOrFirstMaker})
     </a>) : null}
     <a
       href={`/gallery/detail/${objectNumber}`}
-      className=" cursor-pointer h-full w-full  rounded-t-lg aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-75 hover:bg-black z-10"
+      className=" cursor-pointer h-full w-full  rounded-t-lg aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-75 hover:bg-black  z-10"
     >
         
       <h3 className="text-white py-6 px-3 mx-auto text-xl">

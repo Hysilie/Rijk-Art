@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Router>
-      <div className="h-screen bg-amber-500 flex flex-col">
+      <div className={`h-screen bg-amber-500 flex flex-col `}>
         <NavigationBar
           resultsSearch={resultsSearch}
           getResult={getResult}

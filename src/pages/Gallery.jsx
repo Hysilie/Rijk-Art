@@ -10,6 +10,7 @@ function Gallery() {
  const [data, setData] = React.useState(null)
  const [currentIndex, setCurrentIndex] = useState(0);
  
+
   useEffect(() => {
   fetch(`${API_URL}?key=${API_KEY}&search?&p=1&ps=50&type=painting&imgonly=True&st=Objects&ii=0`)
   .then(response => response.json())
