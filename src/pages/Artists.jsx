@@ -113,13 +113,12 @@ useEffect(() => {
           className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-96 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
 
-          {portraits.map((portrait,index) => <ArtistPresentation  key={index} {...portrait}/>)}
+          {portraits?.map((portrait,index) => <ArtistPresentation  key={index} {...portrait}/>)}
 
         </div>
       </div>
     </div>
 
-{/* *********************************** */}
 
 
     </div>

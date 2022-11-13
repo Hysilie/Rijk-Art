@@ -25,8 +25,8 @@ const portraits = [
   },
   {
     artistName: "Rembrandt van Rijn",
-    key: "Rembrandt+van+Rijn",
-    code: "Leiden - Dutchland",
+    code: "Rembrandt+van+Rijn",
+    country: "Leiden - Dutchland",
     artistUrl: "https://i.ibb.co/TTmQGbM/rembrandt-1.jpg",
     description:
       "Rembrandt Harmenszoon van Rijn known as Rembrandt was a Dutch draughtsman, painter, and printmaker became famous. An innovative and prolific master in three media, he is generally considered one of the greatest visual artists in the history of art.",
