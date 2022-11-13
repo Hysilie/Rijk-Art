@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import vector from '../../src/images/vector.svg'
 import '../../src/style/home.css'
 
@@ -38,7 +39,7 @@ const Home = () => {
           <div className="text-black h-full flex items-center">
             <div className="flex flex-col">
           <p  className=" w-20 text-4xl lg:text-4xl m-5"  id="home-title">Explore the Rijksmuseum</p>
-          <span id="under-title" className='text-lg hidden lg:inline m-5'>Discover a great collection of art</span>
+          <span id="under-title" className='text-lg hidden lg:inline m-5'><Link to ='/gallery'>Discover a great collection of art</Link></span>
           </div></div>
 </div>
     </div>

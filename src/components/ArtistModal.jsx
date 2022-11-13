@@ -47,7 +47,7 @@ const [showModal, setShowModal] = React.useState(false);
                 </div>
                 <div className='flex flex-col justify-center m-4'>
   <Link to={`/artists/gallery/${code}`}>
-                <div className=" cursor-pointer flex justify-center font-normal text-slate-700 hover:text-slate-400"> artist gallery </div>
+                <div className=" cursor-pointer flex justify-center font-normal text-slate-700 hover:text-slate-400"> artist gallery <br></br> (results by revelance) </div>
                 <div className=" cursor-pointer flex justify-center font-normal text-slate-700 hover:text-slate-400">
                  <img className='h-5 w-5' src={arrow} alt='more info'/> </div>
 </Link>

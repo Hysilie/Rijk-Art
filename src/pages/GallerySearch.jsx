@@ -9,7 +9,7 @@ const {id} = useParams();
 
 
 const fetchPainters = () => {
-    fetch(`https://www.rijksmuseum.nl/api/en/collection?key=puw2AEY6&involvedMaker=${id}`)
+    fetch(`https://www.rijksmuseum.nl/api/en/collection?key=puw2AEY6&search?p=1&ps=30&involvedMaker=${id}&imgonly=true`)
     .then(response => response.json())
     .then(result => {
         setPainter(result.artObjects)
