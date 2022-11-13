@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import GalleryCarrousel from '../../src/components/GalleryCarrousel'
 import '../../src/style/gallery.css'
 
@@ -8,18 +8,18 @@ const API_KEY= 'puw2AEY6'
 
 function Gallery() {
  const [data, setData] = React.useState(null)
-
+ const [currentIndex, setCurrentIndex] = useState(0);
+ 
   useEffect(() => {
-  fetch(`${API_URL}?key=${API_KEY}&search?&p=1&ps=30&type=painting&imgonly=True&st=Objects&ii=0`)
+  fetch(`${API_URL}?key=${API_KEY}&search?&p=1&ps=50&type=painting&imgonly=True&st=Objects&ii=0`)
   .then(response => response.json())
   .then(result => {
     setData(result.artObjects)
+    
   })
   .catch(error => console.log('error', error));       
     }, [])
  
-
-
 
 
 
@@ -35,7 +35,7 @@ return (
 </div>
 
 {/* Carrousel */}
-<GalleryCarrousel data={data}/>
+<GalleryCarrousel data={data} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
 
       </div>
   )
