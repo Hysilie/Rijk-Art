@@ -31,12 +31,13 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <br/>
 <br/>
 
-<h1 href='#'>Work in progress</h1>
+<h1 href='#'>Feature Plan</h1>
 <ul>
 <li>Explore Tree.JS </li>
 <li>Create my API for painters informations</li>
 <li>Use Node and deploy</li>
 <li>Improve Search Bar</li>
+<li>Infinite scroll galeery</li>
 </ul>
 
 <h1 href='#'>Objectives</h1>
