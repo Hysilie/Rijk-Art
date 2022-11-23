@@ -4,13 +4,17 @@ import '../../src/style/detailArt.css'
 import DetailArtImage from '../../src/components/DetailArtImage'
 import ReturnButton from '../../src/components/ReturnButton'
 
+
+const API_URL = process.env.REACT_APP_API_URL;
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 function DetailArt() {
 const [art, setArt] = useState([])
 const {id} = useParams();
 
 
 const fetchArt =() => {
-    fetch(`https://www.rijksmuseum.nl/api/en/collection/${id}?key=puw2AEY6`)
+    fetch(`${API_URL}${id}?key=${API_KEY}`)
     .then((response) => response.json())
     .then((result) => {
         setArt(result)

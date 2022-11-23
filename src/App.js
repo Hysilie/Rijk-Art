@@ -7,11 +7,11 @@ function App() {
   const [resultsSearch, setResultsSearch] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
-  const API_URL = "https://www.rijksmuseum.nl/api/en";
-  const API_KEY = "puw2AEY6";
+  const API_URL = process.env.REACT_APP_API_URL;
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   const getResult = () => {
-    fetch(`${API_URL}/collection?key=${API_KEY}&q=${searchValue}&ps=14&p=1`)
+    fetch(`${API_URL}?key=${API_KEY}&q=${searchValue}&ps=14&p=1`)
       .then((response) => response.json())
       .then((result) => {
         setResultsSearch(result.artObjects);
