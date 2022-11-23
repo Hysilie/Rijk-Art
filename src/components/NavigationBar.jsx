@@ -21,7 +21,7 @@ const [navbar, setNavbar] = useState(false);
 {/* Div contain the Logo */}
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
            
-              <div className="h-10 w-16" ><Link to='/'><img className='object-fill' alt='Logo Rijk Art' src={logoRijk}/></Link></div>
+              <div className="h-10 z-20 relative w-16  " ><Link to='/'><img className='object-fill' alt='Logo Rijk Art' src={logoRijk}/></Link></div>
             
 {/* Menu burger - imported tailwind */}
         <div className="md:hidden">
@@ -39,11 +39,11 @@ const [navbar, setNavbar] = useState(false);
            </div>
      </div>
     <div>
-        <div className={`flex-1 justify-self-center bg-amber-500  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? "block" : "hidden"
+        <div className={`flex-1  bg-amber-500  mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? "block absolute z-10 right-0 w-screen text-right p-3" : "hidden"
               }`} >
 
 {/* Menu -burger - list with links to page  */}
-            <ul className="drop-shadow-lg shadow-black items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0  z-20">
+            <ul className={`drop-shadow-lg shadow-black items-center ${ navbar ?'justify-end ' : 'justify-end' } space-y-8 md:flex md:space-x-6 md:space-y-0  z-20`}>
               <div className='absolute w-full'>
 
               </div>
