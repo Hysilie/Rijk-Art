@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.f6a799d4.css",
+    "main.js": "/react-gh-pages/static/js/main.73f9885f.js",
+    "static/media/backgroundHome2.jpg": "/react-gh-pages/static/media/backgroundHome2.dc6c1444f137fbd07ab8.jpg",
+    "static/media/backgroundHome.jpeg": "/react-gh-pages/static/media/backgroundHome.52510f9df30ffaea2eaa.jpeg",
+    "static/media/working.jpg": "/react-gh-pages/static/media/working.ef40e7797ea59d5258ae.jpg",
+    "static/media/logoRijk.png": "/react-gh-pages/static/media/logoRijk.ede703e7db321299ea70.png",
+    "static/media/loupe.png": "/react-gh-pages/static/media/loupe.c6544d3156a8bde3d076.png",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/vector.svg": "/react-gh-pages/static/media/vector.d63787c9c6516b93ebd4e447242e50ca.svg",
+    "main.f6a799d4.css.map": "/react-gh-pages/static/css/main.f6a799d4.css.map",
+    "main.73f9885f.js.map": "/react-gh-pages/static/js/main.73f9885f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6a799d4.css",
+    "static/js/main.73f9885f.js"
+  ]
+}
