@@ -14,7 +14,7 @@ const {id} = useParams();
 
 
 const fetchArt =() => {
-    fetch(`${API_URL}${id}?key=${API_KEY}`)
+    fetch(`${API_URL}/${id}?key=${API_KEY}`)
     .then((response) => response.json())
     .then((result) => {
         setArt(result)
