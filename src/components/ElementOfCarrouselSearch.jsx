@@ -21,7 +21,7 @@ function ElementOfCarrouselSearch({objectNumber,title,webImage,principalOrFirstM
       className="h-full w-full aspect-square  rounded-t-lg block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
      style={{ backgroundImage:   `url(https://www.steaua-dunarii.ro/client/img/image-not-found.png)` }} 
     /> }
-    <a
+    <div
     //eslint-disable-next-line
       href={`/gallery/detail/${objectNumber}`}
       className=" cursor-pointer h-full w-full  rounded-t-lg aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-75 hover:bg-black z-10"
@@ -31,7 +31,7 @@ function ElementOfCarrouselSearch({objectNumber,title,webImage,principalOrFirstM
       {`"${title}"`}<br></br>by<br></br>{principalOrFirstMaker}
       </h3><br></br><br></br>
       <Link to={`/gallery/detail/${objectNumber}`}><p>Click to discover</p></Link>
-    </a> 
+    </div> 
   </div>
   )
 }

@@ -117,7 +117,6 @@ function GallerySearchBar({resultsSearch, currentIndex, setCurrentIndex}) {
           >
 
 {resultsSearch?.map((result, index) => {
-  console.log(result)
             return <ElementOfCarrouselSearch key={index} {...result}/>
     } ) }  
             </div>

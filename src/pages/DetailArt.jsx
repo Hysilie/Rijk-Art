@@ -14,8 +14,8 @@ const fetchArt =() => {
     .then((response) => response.json())
     .then((result) => {
         setArt(result)
-        console.log(result)
     })
+    .catch((error) => console.log('error', error));
 }
 useEffect(() => {
     fetchArt();
@@ -25,13 +25,15 @@ useEffect(() => {
   return (
 
 
-    <div className=" bg-white drop-shadow-md h-4/6 flex flex-col w-screen box-border">
+    <div className="bg-white drop-shadow-md h-4/6 flex flex-col w-screen box-border">
 
 {/* Make the Title between horizontal bar */}
-<hr className='w-2/6'></hr>
+<hr className="w-2/6"></hr>
 <div className="hidden md:flex relative flex py-5 items-center">
     <div className="flex-grow border-t border-gray-200"></div>
-    <span className="flex-shrink mx-4 text-gray-200"><h2 className='text-black text-5xl m-5' id='galleryTitle'>Focus</h2></span>
+    <span className="flex-shrink mx-4 text-gray-200">
+      <h2 className='text-black text-5xl m-5' id='galleryTitle'>Focus</h2>
+      </span>
     <div className="flex-grow border-t border-gray-200"></div>
 </div>
 
@@ -53,7 +55,7 @@ useEffect(() => {
 
 {/* map for different materials used */}
          {art.artObject? <p className='text-center text-sm'>{art.artObject.materials.map(
-              (material) => <span>{material}</span>)}</p> :null}  
+              (material, index) => <span key={index}>{material}</span>)}</p> :null}  
           </div>
           {art.artObject? <p className=' text-justify text-sm mt-2'> {art.artObject.plaqueDescriptionEnglish}</p>:null}
     </div>
@@ -64,7 +66,7 @@ useEffect(() => {
          {art.artObject? <p className=' text-base'>{art.artObject.principalMaker}</p> : null } 
         {art.artObject? <p className='text-slate-300 font-bold'>{art.artObject.dating.sortingDate}</p> :null}
         {art.artObject? <p className=' text-sm'>{art.artObject.materials.map(
-              (material) => <span>{material}</span>)}</p> :null}  
+              (material, index) => <span key={index}>{material}</span>)}</p> :null}  
          {art.artObject? <p className=' text-justify text-sm mt-2'> {art.artObject.plaqueDescriptionEnglish}</p>:null}
     </div>
 
@@ -73,8 +75,6 @@ useEffect(() => {
 </div>
  </div>
  
- {/* sm screen */}
-{/*   <div className='text-black md:hidden'> Salut</div> */}
 </div>
 
   )
