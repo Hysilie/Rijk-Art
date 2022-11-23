@@ -33,11 +33,20 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 
 <h1 href='#'>Feature Plan</h1>
 <ul>
-<li>Explore Tree.JS </li>
+<li>✅ Improve Search Bar</li>
+<li>✅ Remove logs and some console bugs</li>
+<li>Improve variables management</li>
 <li>Create my API for painters informations</li>
 <li>Use Node and deploy</li>
-<li>Improve Search Bar</li>
-<li>Infinite scroll galeery</li>
+<li>Explore Tree.JS </li>
+</ul>
+
+<h1 href='#'>How to install / npm packages</h1>
+<ul>
+<li>1/ npm i react-router-dom</li>
+<li>2/ npm i dotenv </li>
+<li>3/ and start the application with `npm start`</li>
+
 </ul>
 
 <h1 href='#'>Objectives</h1>
