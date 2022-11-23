@@ -31,7 +31,7 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <br/>
 <br/>
 
-<h1 href='#'>Work in progress</h1>
+<h1 href='#'>Feature Plan</h1>
 <ul>
 <li>✅ Improve Search Bar</li>
 <li>✅ Remove logs and some console bugs</li>
@@ -46,6 +46,7 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <li>1/ npm i react-router-dom</li>
 <li>2/ npm i dotenv </li>
 <li>3/ and start the application with `npm start`</li>
+
 </ul>
 
 <h1 href='#'>Objectives</h1>
