@@ -1,10 +1,10 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 
 
 
 function Searchbar({searchValue, setSearchValue, getResult}) {
-/* Function to press enter key and reset the value */
+/* Function to press enter key and reset the */
    const handleKeyPress = (event) => {
     if(event.key ===  'Enter'){ 
         setSearchValue(event.target.value);
@@ -15,7 +15,9 @@ function Searchbar({searchValue, setSearchValue, getResult}) {
 
 return (
     <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+   <form className="relative flex items-center "> 
     <div className="grid place-items-center h-full w-12 text-gray-300">
+        
     <Link to='/gallery/search/'>
         <button onClick={() => {
             getResult(); 
@@ -33,7 +35,7 @@ return (
     placeholder="Search something.." 
     onChange={(e) => setSearchValue(e.target.value)}
     onKeyPress={(e) => handleKeyPress(e)}
-	value={searchValue}/> 
+	value={searchValue}/> </form>
 </div>
 
 
