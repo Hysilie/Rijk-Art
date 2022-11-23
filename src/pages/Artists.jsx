@@ -3,6 +3,7 @@ import ArtistPresentation from '../../src/components/ArtistPresentation'
 import '../../src/style/artists.css'
 import  portraits from '../../src/data/portraits'
 
+
 function Artists() {
 
 const maxScrollWidth = useRef(0);
@@ -57,7 +58,7 @@ useEffect(() => {
 <hr className='w-2/6'></hr>
 <div className="relative flex py-5 items-center">
     <div className="flex-grow border-t border-gray-200"></div>
-    <span className="flex-shrink mx-4 text-gray-200"><h2 className='text-black text-5xl m-5' id='galleryTitle'> Famous Artists</h2></span>
+    <span className="flex-shrink mx-4 text-gray-200"><h2 className='text-black text-5xl m-5' id='galleryTitle'>Famous Artists</h2></span>
     <div className="flex-grow border-t border-gray-200"></div>
 </div>
      {/* Make the Carrousel */}
@@ -112,13 +113,12 @@ useEffect(() => {
           className="carousel-container ml-12 mr-12 md:ml-32 md:mr-32 content-center h-96 relative flex gap-12 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
 
-          {portraits.map((portrait,index) => <ArtistPresentation  key={index} {...portrait}/>)}
+          {portraits?.map((portrait,index) => <ArtistPresentation  key={index} {...portrait}/>)}
 
         </div>
       </div>
     </div>
 
-{/* *********************************** */}
 
 
     </div>

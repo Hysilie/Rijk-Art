@@ -8,8 +8,11 @@ const {id} = useParams();
 ;
 
 
+const API_URL = process.env.REACT_APP_API_URL;
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 const fetchPainters = () => {
-    fetch(`https://www.rijksmuseum.nl/api/en/collection?key=puw2AEY6&involvedMaker=${id}`)
+    fetch(`${API_URL}?key=${API_KEY}&search?p=1&ps=30&involvedMaker=${id}&imgonly=true`)
     .then(response => response.json())
     .then(result => {
         setPainter(result.artObjects)

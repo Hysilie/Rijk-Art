@@ -1,13 +1,13 @@
 import React from 'react'
-import {useEffect, useState, useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import ElementOfCarrouselSearch from '../components/ElementOfCarrouselSearch';
 
-function GallerySearchBar({resultsSearch}) {
+function GallerySearchBar({resultsSearch, currentIndex, setCurrentIndex}) {
 
 
 
     const maxScrollWidth = useRef(0);
-    const [currentIndex, setCurrentIndex] = useState(0);
+        /* const [currentIndex, setCurrentIndex] = useState(0); */
     const carousel = useRef(null);
   
     const movePrev = () => {
@@ -21,6 +21,7 @@ function GallerySearchBar({resultsSearch}) {
         carousel.current !== null &&
         carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
       ) {
+       
         setCurrentIndex((prevState) => prevState + 1);
       }
     };
@@ -116,7 +117,6 @@ function GallerySearchBar({resultsSearch}) {
           >
 
 {resultsSearch?.map((result, index) => {
-  console.log(result)
             return <ElementOfCarrouselSearch key={index} {...result}/>
     } ) }  
             </div>
