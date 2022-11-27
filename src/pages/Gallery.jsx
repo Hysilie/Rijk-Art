@@ -4,8 +4,8 @@ import '../../src/style/gallery.css'
 
 /*  API KEY for call*/
 
-const API_URL = process.env.REACT_APP_API_URL;
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = 'https://www.rijksmuseum.nl/api/en/collection';
+const API_KEY = 'puw2AEY6';
 
 function Gallery() {
  const [data, setData] = React.useState(null)
