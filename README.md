@@ -5,7 +5,7 @@
 <p>I started to learn web development in Sept 22. I made a small project based on React because I'm currently learning it. <br/>
 This was my first solo experience , so little things can not look very good in front of everyone, sorry for mistakes, I tried to make some comments on my code.<br/>
 Thanks a lot to the Rijksmuseum to make a simple and free <a href='https://data.rijksmuseum.nl/object-metadata/api/'>API</a>. <br/>
-Want to explore the website instead of a repo ? Here : //Work in progress // </p>
+Want to explore the website instead of a repo ? Here : <a href="https://rijk-art.herokuapp.com/">https://rijk-art.herokuapp.com/</a> </p>
 <br/>
 <br/>
 <h1 href='#'>Tech Stack</h1>
@@ -35,9 +35,9 @@ Want to explore the website instead of a repo ? Here : //Work in progress // </p
 <ul>
 <li>✅ Improve Search Bar</li>
 <li>✅ Remove logs and some console bugs</li>
-<li>Improve variables management</li>
+<li>✅ Improve variables management (put off to deploy)</li>
 <li>Create my API for painters informations</li>
-<li>Use Node and deploy</li>
+<li>✅ Deploy</li>
 <li>Explore Tree.JS </li>
 </ul>
 
